@@ -1,0 +1,32 @@
+
+@mixin lg {
+  @media (min-width: 768px) {
+    @content;
+}
+}
+
+.about {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  &__button {
+    margin: 0 auto;
+    align-self: center;
+  }
+  &__summary {
+    line-height: 1.5;
+  }
+  &__technology-grid {
+    margin: 1rem 0; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    @include lg {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1rem;
+    }
+  }
+  &__technology-grid-item:before {
+    content: "• "
+  }
+}

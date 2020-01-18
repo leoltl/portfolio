@@ -1,6 +1,7 @@
 import React from "react";
 
 import Hero from '../components/Hero/hero';
+import About from '../components/About/about';
 import Layout from '../components/Layout/layout';
 
 import '../components/base.scss';
@@ -8,9 +9,9 @@ import '../components/base.scss';
 const IndexPage = () => (
   <Layout>
     <Hero />
-    {/* <About />
-    <Project />
-    <Contact /> */}
+    <About />
+    {/* <Project /> */}
+    {/* <Contact /> */}
   </Layout>
 )
 

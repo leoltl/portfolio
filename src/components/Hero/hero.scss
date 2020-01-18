@@ -8,7 +8,6 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: space-evenly;
-    font-family: "Shop", sans-serif;
     font-weight: 400;
     width: 100%;
   }
@@ -21,9 +20,9 @@
     margin: 0 auto;
     box-sizing: border-box;
     height: 3vw;
-    max-height: 35px;
+    max-height: 25px;
     width: 3vw;
-    max-width: 35px;
+    max-width: 25px;
     border-style: solid;
     border-color: black;
     border-width: 0px 2px 2px 0px;
