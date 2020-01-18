@@ -71,6 +71,9 @@ table {
 //import google font
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+//import font awesome
+@import url('https://kit.fontawesome.com/adce7370e7.js');
+
 :root {
   font-size:  calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
   padding: 0 2.5%;
@@ -84,7 +87,6 @@ h1 {
   font-size: 3.5rem;
   font-weight: bold;
 }
-
 
 h2 {
   font-size: 2rem;
@@ -128,4 +130,15 @@ small {
 
 article {
   margin: 1rem 0;
+}
+
+input, textarea {
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+a:link, a:visited, a {
+  color: black;
 }

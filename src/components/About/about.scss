@@ -1,32 +1,41 @@
-
 @mixin lg {
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     @content;
-}
+  }
 }
 
 .about {
-  // border: 1px solid red;
   display: flex;
   flex-direction: column;
-  &__button {
-    margin: 0 auto;
-    align-self: center;
+  &__content {
+    display: grid;
+    @include lg {
+      grid-template-columns: 3fr 2fr;
+    }
   }
   &__summary {
     line-height: 1.5;
+    @include lg {
+      padding: 1rem;
+    }
+  }
+  &__technology {
+    white-space: nowrap;
+    @include lg {
+      padding: 1rem;
+      border-left: 2px solid black;
+    }
   }
   &__technology-grid {
     margin: 1rem 0; 
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5rem;
-    @include lg {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 1rem;
-    }
   }
   &__technology-grid-item:before {
     content: "• "
+  }
+  &__button {
+    align-self: center;
   }
 }

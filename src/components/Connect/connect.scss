@@ -1,0 +1,30 @@
+@mixin lg {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+.connect {
+  &__content{
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  &__form {
+    input, textarea {
+      width: 100%;
+      margin: 0.5vh 0;
+    }
+  }
+  margin-bottom: 100px;
+  &__subtitle {
+    margin: 1rem 0;
+    @include lg {
+      margin: 2rem 0;
+    }
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-evenly;
+    color: blank;
+  }
+}
