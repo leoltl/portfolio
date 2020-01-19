@@ -69,12 +69,12 @@ const Projects = (props) => {
       <h3><small>02.</small> Projects</h3>
 
       <div className="projects__feature-project">
-       {featureProjects.map((p, i) => <Project project={p} idx={i}/>)}
+       {featureProjects.map((p, i) => <Project key={i} project={p} idx={i}/>)}
       </div>
 
       { showMore && 
         (<div className="projects__project-group">
-        {projects.map(p => <ProjectCard project={p} />)}
+        {projects.map((p, i) => <ProjectCard key={i} project={p} />)}
         </div>) }
       
       <button className="button projects__button" onClick={() => setShowMore(prev => !prev)}>{ showMore ? "Hide ":"Show More"}</button>      

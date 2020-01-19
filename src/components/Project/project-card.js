@@ -18,8 +18,8 @@ const ProjectCard = ({expandable, project, reverse}) => {
             <><FontAwesomeIcon icon={faUser} /> Solo</> }
           </div>
         <div className="projects__card-icons">
-          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer"><span><FontAwesomeIcon icon={faArrowAltCircleRight} size="5px"/> Live Demo</span></a>
-          <a href={project.srcUrl} target="_blank" rel="noopener noreferrer"><span><FontAwesomeIcon icon={faArrowAltCircleRight} size="5px"/> Source Code</span></a>
+          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer"><span><FontAwesomeIcon icon={faArrowAltCircleRight}/> Live Demo</span></a>
+          <a href={project.srcUrl} target="_blank" rel="noopener noreferrer"><span><FontAwesomeIcon icon={faArrowAltCircleRight}/> Source Code</span></a>
         </div>
       </div>
     </article>

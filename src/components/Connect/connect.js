@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -7,19 +7,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './connect.scss';
 
 const Connect = (props) => {
-
-  const [formField, setFormField] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleForm = (e) => {
-    setFormField(prev => (
-     {...prev, [e.target.name]: e.target.value}
-    )) 
-  };
-
   return (
     <section className='connect'>
       <h3><small>03.</small> Connect with me</h3>
@@ -30,12 +17,12 @@ const Connect = (props) => {
             <input type="hidden" name="bot-field" />
             <div className="connect__form-group">
               <label htmlFor="name">Your name:</label><br />
-              <input name="name" id="name" value={formField.name} onChange={handleForm}/><br />
+              <input name="name" id="name" /><br />
               <label htmlFor="email">Email:</label><br />
-              <input name="email" id="email"value={formField.email} onChange={handleForm}/>
+              <input name="email" id="email"/>
             </div>
             <label htmlFor="message">Message:</label><br />
-            <textarea name="message" id="message" rows="3" value={formField.email} onChange={handleForm}/>
+            <textarea name="message" id="message" rows="3" />
             <button className="button" type="submit">Submit</button>
           </form>
         </div>
