@@ -15,7 +15,7 @@ const featureProjects = [
     techStack: 'React, Sass, TypeScript, Node.js, Express, socket.io',
     team: true,
   },
-  { problemStatement: "Do you wanted to order food from restaurant, skipping the line and pick up your food immediate as you go in?",
+  { problemStatement: "Do you want to order food from restaurant, skipping the line and pick up your food immediate as you go in?",
     title: 'Litual',
     description: 'A food ordering experience for a single restaurant. Hungry clients of this fictitious restaurant can visit its website, select one or more dishes and place an order for pick-up. They will receive a notification when their order is ready.',
     imageUrl: 'https://raw.githubusercontent.com/leoltl/Litual-LHL-midterm/master/Screenshot_2020-01-18%20Home%20Page.png',

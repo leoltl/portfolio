@@ -19,6 +19,7 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.18);
     border-radius: 20px;
     max-width: 325px;
+    margin-bottom: 2.5rem;
     overflow: hidden;
     .img {
       max-height: 402px;
@@ -59,6 +60,9 @@
   }
   &__button {
     align-self: center;
+  }
+  &__problem-statement {
+    line-height: 1.25;
   }
   .reverse>:first-child {
     grid-column-end: -1;
