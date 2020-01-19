@@ -41,8 +41,8 @@ const Connect = (props) => {
         <div className="connect__online">
           <h4 className="connect__subtitle">Find me online:</h4>
           <div className="connect__icons">
-            <a href="https://github.com/leoltl" target="_blank"><FontAwesomeIcon icon={faGithubSquare} size="2x"/></a>
-            <a href="https://linkedin.com/in/tl-leolee" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2x"/></a>
+            <a href="https://github.com/leoltl" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithubSquare} size="2x"/></a>
+            <a href="https://linkedin.com/in/tl-leolee" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} size="2x"/></a>
             <a href="mailto:tl.leolee@gmail.com"><FontAwesomeIcon icon={faEnvelope} size="2x"/></a>
           </div>
         </div>

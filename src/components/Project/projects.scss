@@ -1,0 +1,93 @@
+@import '../variable.scss';
+
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  &__card {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.18);
+    border-radius: 20px;
+    max-width: 325px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      max-width: 720px;
+      object-fit: cover;
+    }
+    &-content{
+      padding: 1.25rem;
+      > * {
+        margin-bottom: 0.5rem;
+      }
+      h5 {
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+      p {
+        line-height: 1.25;
+      }
+    }
+    &-icons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  &__button {
+    align-self: center;
+  }
+  .reverse>:first-child {
+    grid-column-end: -1;
+  }
+  svg {
+    color: $primary-color;
+  }
+  @include md {
+    &__card {
+      border-radius: 5px;
+      max-width: 315px;
+    }
+    &__project-group {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.expandable.projects {
+  &__card {
+    @include md {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-items: center;  
+      max-width: initial;
+      grid-auto-flow: column;
+      > * {
+        margin: 0;
+      }
+      img {
+        width: 90%;
+      }
+      
+    }
+    @include lg {
+      img {
+        padding: 2rem;
+      }
+    }
+  }
+
+}
