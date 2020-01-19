@@ -20,9 +20,13 @@
     border-radius: 20px;
     max-width: 325px;
     overflow: hidden;
+    .img {
+      max-height: 402px;
+    }
     img {
       width: 100%;
       max-width: 720px;
+      max-height: 402px;
       object-fit: cover;
     }
     &-content{
@@ -42,6 +46,15 @@
       margin-top: 1rem;
       display: flex;
       justify-content: space-around;
+    }
+    &-badge {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    &-techStack {
+      font-size: 0.8rem;
+      text-align: right;
     }
   }
   &__button {

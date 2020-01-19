@@ -26,7 +26,8 @@ const Connect = (props) => {
       <div className="connect__content">
         <div className="connect__form">
           <h4 className="connect__subtitle">Leave me a message:</h4>
-          <form>
+          <form method="post" netlify-honeypot="bot-field" data-netlify="true">
+            <input type="hidden" name="bot-field" />
             <div className="connect__form-group">
               <label htmlFor="name">Your name:</label><br />
               <input name="name" id="name" value={formField.name} onChange={handleForm}/><br />
