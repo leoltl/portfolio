@@ -13,7 +13,7 @@ const Connect = (props) => {
       <div className="connect__content">
         <div className="connect__form">
           <h4 className="connect__subtitle">Leave me a message:</h4>
-          <form method="post" netlify-honeypot="bot-field" data-netlify="true">
+          <form method="post" name="contact" netlify-honeypot="bot-field" data-netlify="true">
             <input type="hidden" name="bot-field" />
             <div className="connect__form-group">
               <label htmlFor="name">Your name:</label><br />
