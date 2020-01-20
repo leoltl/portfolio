@@ -24,7 +24,6 @@
     }
   }
   &__down-arrow {
-    grid-row: 3/4;
     margin: 0 auto;
     box-sizing: border-box;
     height: 3vw;
@@ -34,12 +33,27 @@
     border-style: solid;
     border-color: $primary-color;
     border-width: 0px 2px 2px 0px;
-    transform: rotate(45deg);
+    transform: rotate(45deg); 
     transition: border-width 150ms ease-in-out;
+    animation: bounce 2s infinite;
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: rotate(45deg) translateY(20px) translateX(20px);
+      }
+      40% {
+        transform: rotate(45deg) translateY(0px) translateX(0px);
+      }
+      60% {
+        transform: rotate(45deg) translateY(10px) translateX(10px);
+      }
+    }
     &:hover {
       cursor: pointer;
       border-bottom-width: 4px;
       border-right-width: 4px;
     }
+  }
+  &__down-arrow-wrapper {
+    grid-row: 3/4;
   }
 }

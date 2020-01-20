@@ -1,4 +1,5 @@
 import React from 'react';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import './hero.scss';
 
@@ -15,7 +16,9 @@ const Hero = (props) => {
           <p>I'm a software developer based in Toronto, ON passionate about building applications that provide great user experience.</p>
         </div>
       </div>
-      <div className="hero__down-arrow"></div>
+      <div className="hero__down-arrow-wrapper" onClick={() => scrollTo('#about')} >
+        <div className="hero__down-arrow"></div>
+      </div>
     </section>
   )
 }
