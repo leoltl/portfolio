@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -7,6 +8,15 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './connect.scss';
 
 const Connect = (props) => {
+
+  const handleGA = useCallback((socialMedia) => {
+    trackCustomEvent({
+      category: "Social Click",
+      action: "Click",
+      label: `${socialMedia}`
+    })
+  },[])
+
   return (
     <section className='connect'>
       <h3><small>03.</small> Connect with me</h3>
@@ -29,9 +39,9 @@ const Connect = (props) => {
         <div className="connect__online">
           <h4 className="connect__subtitle">Find me online:</h4>
           <div className="connect__icons">
-            <a href="https://github.com/leoltl" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithubSquare} size="2x"/></a>
-            <a href="https://linkedin.com/in/tl-leolee" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} size="2x"/></a>
-            <a href="mailto:tl.leolee@gmail.com"><FontAwesomeIcon icon={faEnvelope} size="2x"/></a>
+            <a href="https://github.com/leoltl"  onClick={() => handleGA('github')}target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithubSquare} size="2x"/></a>
+            <a href="https://linkedin.com/in/tl-leolee"  onClick={() => handleGA('linkedin')}target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} size="2x"/></a>
+            <a href="mailto:tl.leolee@gmail.com" onClick={() => handleGA('email')}><FontAwesomeIcon icon={faEnvelope} size="2x"/></a>
           </div>
         </div>
       </div>

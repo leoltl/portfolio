@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
+ 
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleRight, faUser, faUsers } from '@fortawesome/free-solid-svg-icons'
 
 const ProjectCard = ({expandable, project, reverse}) => {
+
+  const handleGA = useCallback((type) => {
+    trackCustomEvent({
+      category: "Project Click",
+      action: "Click",
+      label: `${project.title}, ${type}`
+    })
+  },[project.title])
+
   return (
     <article className={`projects__card${expandable ? " expandable" : ''}${reverse ? " reverse" : ""}`}>
       <img src={project.imageUrl} alt="project" />
@@ -18,8 +29,8 @@ const ProjectCard = ({expandable, project, reverse}) => {
             <><FontAwesomeIcon icon={faUser} /> Solo</> }
           </div>
         <div className="projects__card-icons">
-          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer"><span><FontAwesomeIcon icon={faArrowAltCircleRight}/> Live Demo</span></a>
-          <a href={project.srcUrl} target="_blank" rel="noopener noreferrer"><span><FontAwesomeIcon icon={faArrowAltCircleRight}/> Source Code</span></a>
+          <a href={project.demoUrl} onClick={() => handleGA('Live')} target="_blank" rel="noopener noreferrer"><span><FontAwesomeIcon icon={faArrowAltCircleRight}/> Live Demo</span></a>
+          <a href={project.srcUrl} onClick={() => handleGA('Code')} target="_blank" rel="noopener noreferrer"><span><FontAwesomeIcon icon={faArrowAltCircleRight}/> Source Code</span></a>
         </div>
       </div>
     </article>

@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
-import Project from './project'
+import React, { useState, useCallback } from 'react';
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 
+import Project from './project'
 import ProjectCard from './project-card';
 
 import './projects.scss';
+
+
+const handleGA = useCallback(e => {
+  trackCustomEvent({
+    category: "Show More Click",
+    action: "Click",
+  })
+}, [])
 
 const Projects = ({ projects }) => {
   const [showMore, setShowMore] = useState(false);
@@ -20,7 +29,13 @@ const Projects = ({ projects }) => {
         {projects.map((p, i) => !p.featured ? <ProjectCard key={i} project={p} /> : null)}
         </div>) }
       
-      <button className="button projects__button" onClick={() => setShowMore(prev => !prev)}>{ showMore ? "Hide ":"Show More"}</button>      
+      <button className="button projects__button" 
+          onClick={() => {
+            setShowMore(prev => !prev);
+            handleGA();
+          }}>
+        {showMore ? "Hide ":"Show More"}
+      </button>      
     </section>
   )
 }

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 import './about.scss';
 
 const About = (props) => {
+  const handleGA = useCallback(e => {
+    trackCustomEvent({
+      category: "Resume Click",
+      action: "Click",
+    })
+  })
+
   return (
     <section className="about">
       <h3><small>01.</small> About Me</h3>
@@ -29,7 +37,7 @@ const About = (props) => {
           </div>
         </article>
       </div>
-      <a className="about__button" href="https://www.dropbox.com/s/dixfhk87mhydum8/Leo_LEE_Resume.pdf" target="__blank"><button className="button">My résumé</button></a>
+      <a className="about__button" href="https://www.dropbox.com/s/dixfhk87mhydum8/Leo_LEE_Resume.pdf" target="__blank"><button className="button" onClick={handleGA} >My résumé</button></a>
     </section>
   )
 }
