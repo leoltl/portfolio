@@ -9,10 +9,10 @@ const About = (props) => {
       category: "Resume Click",
       action: "Click",
     })
-  })
+  }, [])
 
   return (
-    <section className="about">
+    <section className="about" id="about">
       <h3><small>01.</small> About Me</h3>
       <div className="about__content">
         <article className="about__summary">

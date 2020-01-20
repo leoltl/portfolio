@@ -18,7 +18,7 @@ const Connect = (props) => {
   },[])
 
   return (
-    <section className='connect'>
+    <section className='connect' id="connect">
       <h3><small>03.</small> Connect with me</h3>
       <div className="connect__content">
         <div className="connect__form">

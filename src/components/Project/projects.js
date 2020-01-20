@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 
 import Project from './project'
@@ -17,7 +17,7 @@ const handleGA = ()=> {
 const Projects = ({ projects }) => {
   const [showMore, setShowMore] = useState(false);
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <h3><small>02.</small> Projects</h3>
 
       <div className="projects__feature-project">

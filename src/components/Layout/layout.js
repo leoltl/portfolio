@@ -7,7 +7,7 @@ import './layout.scss';
 const Layout = (props) => {
   return (
     <>
-    {/* <Header /> */}
+    <Header />
     <main>{props.children}</main>
     </>
   )

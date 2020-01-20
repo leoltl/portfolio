@@ -1,4 +1,42 @@
+@mixin lg {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
 header {
-  border: 1px solid red !important;
   height: 10vh;
+  img {
+    width: 10vh;
+    height: 10vh;
+  }
+  .header {
+    &__container {
+      // border: 1px solid red !important;
+      margin: 0 2vw; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      nav {
+        visibility: hidden;
+        display: flex;
+        list-style-type: none;
+        > * {
+          margin-left: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @include lg {
+    // border: 1px solid red !important;
+    .header {
+      &__container {
+        margin: 0 10vw;
+        nav {
+          visibility: visible;
+        }
+      }
+    }
+  }
 }
