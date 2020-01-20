@@ -7,12 +7,12 @@ import ProjectCard from './project-card';
 import './projects.scss';
 
 
-const handleGA = useCallback(e => {
+const handleGA = ()=> {
   trackCustomEvent({
     category: "Show More Click",
     action: "Click",
   })
-}, [])
+}
 
 const Projects = ({ projects }) => {
   const [showMore, setShowMore] = useState(false);
