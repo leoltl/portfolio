@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from "react-helmet";
 
 import Header from '../Header/header'; 
+import Footer from '../Footer/footer';
 
 import './layout.scss';
 
@@ -14,6 +15,7 @@ const Layout = (props) => {
       </Helmet>
     <Header />
     <main>{props.children}</main>
+    <Footer />
     </>
   )
 }
