@@ -5,9 +5,9 @@
  */
 
 const projects = [
-  { problemStatement: "Have you bought an item that you only used once, and has been sitting at home since?",
+  { problemStatement: "Have you bought an item that you only used once, and had been sitting at home since?",
     title: 'weQuest',
-    description: 'A mobile app that matches user and owners of products through a reverse auction mechanism. Built for the Lighthouse Labs final project. ',
+    description: 'A mobile app that matches users and owners of products through a reverse auction mechanism. Built for the Lighthouse Labs final project.',
     imageUrl: 'https://raw.githubusercontent.com/leoltl/weQuest/master/Screenshot%20from%202020-01-18%2022-37-44.png',
     demoUrl: 'https://wequest.xyz',
     srcUrl: 'http://github.com/leoltl/weQuest',
@@ -15,9 +15,9 @@ const projects = [
     team: true,
     featured: true,
   },
-  { problemStatement: "Do you want to order food from restaurant, skipping the line and pick up your food immediate as you go in?",
+  { problemStatement: "Do you want to order food from restaurants, skipping the line and pick up your food immediate as you go in?",
     title: 'Litual',
-    description: 'A food ordering experience for a single restaurant. Hungry clients of this fictitious restaurant can visit its website, select one or more dishes and place an order for pick-up. They will receive a notification when their order is ready.',
+    description: 'A food ordering experience for a single restaurant. Hungry clients of this restaurant can visit its website, select one or more dishes and place an order for pick-up. They will receive a notification when their order is ready.',
     imageUrl: 'https://raw.githubusercontent.com/leoltl/Litual-LHL-midterm/master/Screenshot_2020-01-18%20Home%20Page.png',
     demoUrl: 'https://litual.herokuapp.com/',
     srcUrl: 'http://github.com/leoltl/LHL-midterm',
