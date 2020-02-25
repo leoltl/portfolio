@@ -18,7 +18,7 @@ const About = (props) => {
         <article className="about__summary">
           I am an ecommerce business professional turned Full Stack Web Developer with knowledge in 
           digital experience best practices. Passionate and curious about all things digital. 
-          Eager to combine my user experience obsessions and technical know-hows, to translate 
+          Eager to combine my user experience obsession and technical know-hows, to translate 
           business requirements and user stories into performant, well-tested product that 
           delights users.
         </article>

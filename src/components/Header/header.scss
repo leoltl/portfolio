@@ -19,7 +19,12 @@ header {
       justify-content: space-between;
       align-items: center;
       nav {
-        font-family: 'Montserrat', sans-serif;
+        .list-item{
+          border: none;
+          background: none;
+          font-size: 0.85rem;
+          font-family: 'Montserrat', sans-serif;
+        }
         visibility: hidden;
         display: flex;
         list-style-type: none;

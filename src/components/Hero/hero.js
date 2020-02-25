@@ -13,7 +13,7 @@ const Hero = (props) => {
           <h2>Full Stack Web Developer</h2>
         </div>
         <div className="hero__tagline">
-          <p>I'm a software developer based in Toronto, ON passionate about building applications that provide great user experience.</p>
+          <p>I'm a software developer based in Toronto, ON. Passionate about building web applications that marries good user experience design.</p>
         </div>
       </div>
       <div className="hero__down-arrow-wrapper" onClick={() => scrollTo('#about')} >

@@ -5,7 +5,7 @@ import './footer.scss';
 const Footer = (props) => {
   return (
     <footer>
-      Desiged &amp; Built by Leo Lee
+      Designed &amp; Built by Leo Lee
     </footer>
   )
 }
