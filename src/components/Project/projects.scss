@@ -1,4 +1,4 @@
-@import '../variable.scss';
+@import "../variable.scss";
 
 @mixin md {
   @media (min-width: 768px) {
@@ -16,11 +16,13 @@
   display: flex;
   flex-direction: column;
   &__card {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.18);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.11), 0 3px 6px rgba(0, 0, 0, 0.18);
     border-radius: 20px;
     max-width: 325px;
     margin-bottom: 2.5rem;
     overflow: hidden;
+    transform: translateY(-20%);
+    opacity: 0;
     .img {
       max-height: 402px;
     }
@@ -30,7 +32,7 @@
       max-height: 402px;
       object-fit: cover;
     }
-    &-content{
+    &-content {
       padding: 1.25rem;
       > * {
         margin-bottom: 0.5rem;
@@ -49,7 +51,7 @@
       justify-content: space-around;
     }
     &-badge {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-size: 0.8rem;
       display: inline-block;
     }
@@ -64,7 +66,7 @@
   &__problem-statement {
     line-height: 1.25;
   }
-  .reverse>:first-child {
+  .reverse > :first-child {
     grid-column-end: -1;
   }
   svg {
@@ -83,13 +85,19 @@
   }
 }
 
+.shifted {
+  opacity: 1;
+  transition: ease-in 0.75s all;
+  transform: translateY(0);
+}
+
 .expandable.projects {
   &__card {
     @include md {
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-items: center;
-      align-items: center;  
+      align-items: center;
       max-width: initial;
       grid-auto-flow: column;
       > * {
@@ -98,7 +106,6 @@
       img {
         width: 90%;
       }
-      
     }
     @include lg {
       img {
@@ -106,5 +113,4 @@
       }
     }
   }
-
 }

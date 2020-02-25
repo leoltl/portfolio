@@ -1,18 +1,22 @@
-import React from 'react';
+import React from "react"
 
-import ProjectCard from './project-card';
+import ProjectCard from "./project-card"
 
-import './projects.scss';
+import "./projects.scss"
 
-const Project = ({project, idx}) => {
+const Project = ({ project, idx }) => {
   return (
     <>
-      <div className="projects__problem-statement">
+      {/* <div className="projects__problem-statement">
         {project.problemStatement}
-      </div>
-      <ProjectCard expandable={true} project={project} reverse={idx % 2 === 0}/>
+      </div> */}
+      <ProjectCard
+        expandable={true}
+        project={project}
+        reverse={idx % 2 === 0}
+      />
     </>
   )
 }
 
-export default Project;
+export default Project
