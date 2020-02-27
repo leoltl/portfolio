@@ -1,9 +1,9 @@
-import React from 'react';
-import scrollTo from 'gatsby-plugin-smoothscroll';
+import React from "react"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
-import './hero.scss';
+import "./hero.scss"
 
-const Hero = (props) => {
+const Hero = props => {
   return (
     <section className="hero">
       <div className="hero__text-content">
@@ -13,14 +13,20 @@ const Hero = (props) => {
           <h2>Full Stack Web Developer</h2>
         </div>
         <div className="hero__tagline">
-          <p>I'm a software developer based in Toronto, ON. Passionate about building web applications that marries good user experience design.</p>
+          <p>
+            I'm a software developer based in Canada. Passionate about building
+            web applications that marries good user experience design.
+          </p>
         </div>
       </div>
-      <div className="hero__down-arrow-wrapper" onClick={() => scrollTo('#about')} >
+      <div
+        className="hero__down-arrow-wrapper"
+        onClick={() => scrollTo("#about")}
+      >
         <div className="hero__down-arrow"></div>
       </div>
     </section>
   )
 }
 
-export default Hero;
+export default Hero
