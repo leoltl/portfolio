@@ -18,7 +18,7 @@ const projects = [
     title: 'Spotify Music Profile',
     description: 'View your favourite songs and artists based on Spotify listening history. Discover song audio feature and recommendations. Inspired by an open-source application.',
     imageUrl: 'https://raw.githubusercontent.com/leoltl/spotify-profile/master/Screenshot_2020-01-18%20Spotify%20Profile%20See%20your%20spotify%20activties.png',
-    demoUrl: 'https://leoltl-hashgram.herokuapp.com/',
+    demoUrl: 'https://leoltl-spotify-profile.herokuapp.com/',
     srcUrl: 'https://github.com/leoltl/spotify-profile',
     techStack: 'React, CSS in JS',
     team: false,
