@@ -8,7 +8,7 @@ const projects = [
   { title: 'hashGram',
     description: 'hashGram is a full stack Instagram clone. The goal was to build a functional clone of some Internet-based photo-sharing application.',
     imageUrl: 'https://raw.githubusercontent.com/leoltl/hashGram/master/public/screenshot-1.png',
-    demoUrl: 'https://leoltl-spotify-profile.herokuapp.com/ ',
+    demoUrl: 'https://leoltl-hashgram.herokuapp.com/',
     srcUrl: 'https://github.com/leoltl/hashGram',
     techStack: 'Node.js, Express, AWS S3, Knex, Postgres, jest, TDD',
     team: false,
