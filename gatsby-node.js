@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const projects = [
+ const projects = [
   { title: 'hashGram',
     description: 'hashGram is a full stack Instagram clone. The goal was to build a functional clone of some Internet-based photo-sharing application.',
     imageUrl: 'https://raw.githubusercontent.com/leoltl/hashGram/master/public/screenshot-1.png',
@@ -14,8 +14,7 @@ const projects = [
     team: false,
     featured: true,
   },
-  { problemStatement: "Are you curious about your music listening habit?",
-    title: 'Spotify Music Profile',
+  { title: 'Spotify Music Profile',
     description: 'View your favourite songs and artists based on Spotify listening history. Discover song audio feature and recommendations. Inspired by an open-source application.',
     imageUrl: 'https://raw.githubusercontent.com/leoltl/spotify-profile/master/Screenshot_2020-01-18%20Spotify%20Profile%20See%20your%20spotify%20activties.png',
     demoUrl: 'https://leoltl-spotify-profile.herokuapp.com/',
@@ -24,6 +23,15 @@ const projects = [
     team: false,
     featured: true,
   },
+  { title: 'Headless Blog CMS',
+    description: 'CMS system has an express app that serves content via a REST API. A Vue client app is created for rendering posts and a React admin app is created for managing posts and user comments from the backend api',
+    imageUrl: 'https://raw.githubusercontent.com/leoltl/blogcms-admin/master/public/screenshot-2.png',
+    demoUrl: 'https://leoltl-blogcms-admin.herokuapp.com/',
+    srcUrl: 'https://github.com/leoltl/blogcms-admin',
+    techStack: 'Express, Mongoose, Mongo, passport-jwt, React, Materiaul UI, Vue 3, Element UI',
+    team: false,
+    featured: true,
+  },  
   { problemStatement: "Do you need a software development management app?",
     title: 'Issue tracker',
     description: 'Issue tracker for software team. User can add/remove member from a project, create issue/bug on the project and assign member to work on issues. ',
@@ -34,7 +42,6 @@ const projects = [
     team: false,
     featured: true,
   },
-  
   { problemStatement: "Have you bought an item that you only used once, and had been sitting at home since?",
     title: 'weQuest',
     description: 'A mobile app that matches users and owners of products through a reverse auction mechanism. Built for the Lighthouse Labs final project.',
